@@ -26,4 +26,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/diploma_app:${{ github.ref_name }} ${{ secrets.DOCKERHUB_USERNAME }}/diploma_app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/diploma_app:${{ github.ref_name }}
