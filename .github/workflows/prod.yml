@@ -1,10 +1,8 @@
 name: ci/cd prod
 
 on:
-  label:
-    types:
-      - published
   release:
+    types: [published]
     branches:
       - master
 
