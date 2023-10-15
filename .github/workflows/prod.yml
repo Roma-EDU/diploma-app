@@ -31,3 +31,6 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/diploma_app:${{ github.ref_name }}
             ${{ secrets.DOCKERHUB_USERNAME }}/diploma_app:latest
+
+      - name: New image webhook
+        run: curl ${{ secrets.NEW_DEPLOYMENT_URL }} -X POST -H "Content-Type: application/json" -d "{\"token\":\"${{ secrets.NEW_DEPLOYMENT_TOKEN }}\"}" 
